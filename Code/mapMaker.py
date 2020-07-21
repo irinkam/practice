@@ -11,21 +11,21 @@ mark = data['Средний_балл']
 
 
 def color_change(mark):
-    if (mark > 80):
-        return ('green')
-    elif (mark > 65 & mark <= 80):
-        return ('orange')
+    if mark > 80:
+        return 'green'
+    elif mark > 65 & mark <= 80:
+        return 'orange'
     else:
-        return ('red')
+        return 'red'
 
 
 def rad(mark):
-    if (mark > 80):
-        return (20)
-    elif (mark > 65 & mark <= 80):
-        return (15)
+    if mark > 80:
+        return 20
+    elif mark > 65 & mark <= 80:
+        return 15
     else:
-        return (10)
+        return 10
 
 
 map = folium.Map(location=[56.484680, 84.948197], zoom_start=8)
