@@ -5,7 +5,7 @@ import time
 import pyodbc
 import matplotlib.pyplot as plt
 
-data = pd.read_csv(r'C:\Users\IrinaMesh\Desktop\info2019.csv', delimiter=';')
+data = pd.read_csv(r'.\info2019.csv', delimiter=';')
 df = pd.DataFrame(data,
                   columns=['ID', '№ уровня подготовки', 'Оценка2', 'Дисциплина2', 'Оценка3', 'Дисциплина3', 'Оценка4',
                            'Дисциплина4', 'Оценка5', 'Дисциплина5', 'Учебное заведение', 'Нас пункт УЗ'])

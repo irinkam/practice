@@ -5,7 +5,7 @@ import time
 import pyodbc
 import matplotlib.pyplot as plt
 
-data = pd.read_csv(r'C:\Users\IrinaMesh\Desktop\result.csv', delimiter=';')
+data = pd.read_csv(r'.\result.csv', delimiter=';')
 df = pd.DataFrame(data,
                   columns=['ID', 'Балл', 'Предмет', 'Город', 'Дата_Зачисления', 'Учебное_Заведение'])
 countRow = 0

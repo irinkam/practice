@@ -2,7 +2,7 @@ import folium
 import pandas as pd
 from folium.plugins import MarkerCluster
 
-data = pd.read_csv(r'C:\Users\IrinaMesh\Desktop\cities2019.csv', delimiter=';', encoding='utf-8')
+data = pd.read_csv(r'.\cities2019.csv', delimiter=';', encoding='utf-8')
 city = data['Город']
 lat = data['Широта']
 lon = data['Долгота']
