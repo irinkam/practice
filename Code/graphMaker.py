@@ -42,6 +42,6 @@ ax.grid(which='minor',
         color='gray',
         linewidth=0.1)
 
-plt.savefig('creation.png', dpi=1200)
+plt.savefig('Charts\\creation.png', dpi=1200)
 
 plt.show()
