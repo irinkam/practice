@@ -1,14 +1,17 @@
 import folium
 import pandas as pd
+import os
 from folium.plugins import MarkerCluster
 
-data = pd.read_csv(r'C:\Users\IrinaMesh\Desktop\cities2019.csv', delimiter=';', encoding='utf-8')
+filename = 'cities2019.csv'
+filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\" + "CsvFiles" + "\\" + filename
+
+data = pd.read_csv(filepath, delimiter=';', encoding='utf-8')
 city = data['Город']
 lat = data['Широта']
 lon = data['Долгота']
 people = data['Число_абитуриентов']
 mark = data['Средний_балл']
-
 
 def color_change(mark):
     if mark > 80:
