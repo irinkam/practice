@@ -18,23 +18,27 @@ def color_change(mark):
     else:
         return 'red'
 
-
-def rad(mark):
-    if mark > 80:
+def rad(people):
+    if people > 500:
+        return 50
+    elif 300 < people <= 500:
+        return 40
+    elif 100 < people <= 300:
+        return 30
+    elif 50 < people <= 100:
         return 20
-    elif mark > 65 & mark <= 80:
-        return 15
+    elif 25 < people <= 50:
+        return 20
     else:
         return 10
-
 
 map = folium.Map(location=[56.484680, 84.948197], zoom_start=8)
 
 marker_cluster = MarkerCluster().add_to(map)
 for city, lat, lon, people, mark in zip(city, lat, lon, people, mark):
-    if color_change(mark) == 'orange':
-        folium.CircleMarker(location=[lat, lon], radius=rad(mark),
-                            popup=(city + ": " + str(people) + "  чел., ср. балл=" + str(mark)),
-                            fill_color=color_change(mark), color="gray", fill_opacity=0.5).add_to(marker_cluster)
+    # if color_change(mark) == 'green':
+    folium.CircleMarker(location=[lat, lon], radius=rad(people),
+                        popup=(city + ": " + str(people) + "  чел., ср. балл=" + str(mark)),
+                        fill_color=color_change(mark), color="gray", fill_opacity=0.5).add_to(marker_cluster)
 
-map.save("map3.html")
+map.save("HtmlMaps\map1.html")
