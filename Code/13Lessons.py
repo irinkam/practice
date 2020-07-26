@@ -7,8 +7,12 @@ import plotly.express as px
 from sklearn import linear_model
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score
+import os
 
-data = pd.read_csv(r'C:\Users\DNS\Desktop\TPU_Maps\new_csv\rus.csv', delimiter=';', encoding='utf-8')
+filename = 'phys.csv'
+filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\" + "CsvFiles\\disciplines" + "\\" + filename
+
+data = pd.read_csv(filepath, delimiter=';', encoding='utf-8')
 df = pd.DataFrame(data, columns=['Средний_балл', 'Учебное_заведение', 'Город', 'Число_поступающих'])
 # print(df)
 
@@ -17,19 +21,19 @@ mean = n.mean(df['Средний_балл'])
 median = n.median(df['Средний_балл'])
 mode = s.mode(df['Средний_балл'])
 
-print ("Среднее: ", mean, "\nМедиана: ", median, "\nМода: ", mode, "\n")
+print("Среднее: ", mean, "\nМедиана: ", median, "\nМода: ", mode, "\n")
 
 # Standard Deviation
 std = n.std(df['Средний_балл'])
 var = n.var(df['Средний_балл'])
 
-print ("Стандартное отклонение: ", std, "\nОтклонение: ", var, "\n")
+print("Стандартное отклонение: ", std, "\nОтклонение: ", var, "\n")
 
 # Percentiles
 per25 = n.percentile(df['Средний_балл'], 25)
 per75 = n.percentile(df['Средний_балл'], 75)
 
-print ("25-я процентиль: ", per25, "\n75-я процентиль: ", per75, "\n")
+print("25-я процентиль: ", per25, "\n75-я процентиль: ", per75, "\n")
 
 # Data Distribution
 # лига рандома, которой у нас нет... но вот рандом из имеющихся данных 
@@ -45,8 +49,8 @@ plt.show()
 
 # Scatter Plot (количество + качество)
 # Linear Regression - trendline="ols"
-fig = px.scatter(df, x = df['Средний_балл'], y = df['Число_поступающих'], color = df['Число_поступающих'], 
-                 hover_data = ['Учебное_заведение'], trendline="ols")
+fig = px.scatter(df, x=df['Средний_балл'], y=df['Число_поступающих'], color=df['Число_поступающих'],
+                 hover_data=['Учебное_заведение'], trendline="ols")
 fig.show()
 
 # Полиномы (в plotly этого, кажется, нет)
@@ -71,12 +75,12 @@ scale = StandardScaler()
 x = df[['Средний_балл', 'Число_поступающих']]
 scaledx = scale.fit_transform(x)
 
-print ("Приведенные данные: ", scaledx, "\n")
+print("Приведенные данные: ", scaledx, "\n")
 
-#Train(spotting) & test
+# Train(spotting) & test
 n.random.seed(2)
 x = df['Средний_балл']
-y = df['Число_поступающих'] / x #не понимаю, зачем мы делим на х
+y = df['Число_поступающих'] / x  # не понимаю, зачем мы делим на х
 
 train_x = x[:80]
 train_y = y[:80]
@@ -87,8 +91,9 @@ test_y = y[80:]
 mymodel = n.poly1d(n.polyfit(train_x, train_y, 4))
 r2 = r2_score(train_y, mymodel(train_x))
 
-print("R2 = ", r2, "\n") #чем ближе значение к 1, тем лучше. у нас... не хорошо) 
-print(mymodel(85)) #для предсказаний. тк у нас всё плохо выше, то тут всё еще хуже (могу потом объяснить, что к чему)
+# комментим это, чтобы посмотреть scatter plot в браузере
+print("R2 = ", r2, "\n")  # чем ближе значение к 1, тем лучше. у нас... не хорошо)
+print("Число поступающих" + mymodel(85))  # для предсказаний. тк у нас всё плохо выше, то тут всё еще хуже
 
 # Decision tree
-# потрясающая штука, но нам ее совершенно некуда применить 
+# потрясающая штука, но нам ее совершенно некуда применить
