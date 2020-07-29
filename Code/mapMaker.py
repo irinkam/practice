@@ -3,8 +3,8 @@ import pandas as pd
 import os
 from folium.plugins import MarkerCluster
 
-filename = 'cities2019.csv'
-filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\" + "CsvFiles" + "\\" + filename
+filename = 'chemistry_cities.csv'
+filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\" + "CsvFiles" + "\\" + "disciplines" + "\\" + filename
 
 data = pd.read_csv(filepath, delimiter=';', encoding='utf-8')
 city = data['Город']
@@ -44,4 +44,4 @@ for city, lat, lon, people, mark in zip(city, lat, lon, people, mark):
                         popup=(city + ": " + str(people) + "  чел., ср. балл=" + str(mark)),
                         fill_color=color_change(mark), color="gray", fill_opacity=0.5).add_to(marker_cluster)
 
-map.save("HtmlMaps\map1.html")
+map.save("HtmlMaps\chemistry_cities.html")
