@@ -35,6 +35,8 @@
             this.showButton = new Telerik.WinControls.UI.RadButton();
             this.office2010BlackTheme1 = new Telerik.WinControls.Themes.Office2010BlackTheme();
             this.exitButton = new Telerik.WinControls.UI.RadButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.disciplineComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.showButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +53,7 @@
             // 
             this.egeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.egeComboBox.FormattingEnabled = true;
-            this.egeComboBox.Location = new System.Drawing.Point(875, 85);
+            this.egeComboBox.Location = new System.Drawing.Point(875, 68);
             this.egeComboBox.Name = "egeComboBox";
             this.egeComboBox.Size = new System.Drawing.Size(258, 32);
             this.egeComboBox.TabIndex = 2;
@@ -60,7 +62,7 @@
             // 
             this.egeLabel.AutoSize = true;
             this.egeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.egeLabel.Location = new System.Drawing.Point(871, 45);
+            this.egeLabel.Location = new System.Drawing.Point(871, 34);
             this.egeLabel.Name = "egeLabel";
             this.egeLabel.Size = new System.Drawing.Size(171, 20);
             this.egeLabel.TabIndex = 3;
@@ -69,7 +71,7 @@
             // showButton
             // 
             this.showButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showButton.Location = new System.Drawing.Point(875, 134);
+            this.showButton.Location = new System.Drawing.Point(875, 223);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(258, 36);
             this.showButton.TabIndex = 6;
@@ -88,12 +90,34 @@
             this.exitButton.ThemeName = "Office2010Black";
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(871, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Выбор предмета:";
+            // 
+            // disciplineComboBox
+            // 
+            this.disciplineComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.disciplineComboBox.FormattingEnabled = true;
+            this.disciplineComboBox.Location = new System.Drawing.Point(875, 155);
+            this.disciplineComboBox.Name = "disciplineComboBox";
+            this.disciplineComboBox.Size = new System.Drawing.Size(258, 32);
+            this.disciplineComboBox.TabIndex = 9;
+            this.disciplineComboBox.SelectedIndexChanged += new System.EventHandler(this.disciplineComboBox_SelectedIndexChanged);
+            // 
             // Maps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1166, 647);
+            this.Controls.Add(this.disciplineComboBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.egeLabel);
@@ -118,6 +142,8 @@
         private Telerik.WinControls.UI.RadButton showButton;
         private Telerik.WinControls.Themes.Office2010BlackTheme office2010BlackTheme1;
         private Telerik.WinControls.UI.RadButton exitButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox disciplineComboBox;
     }
 }
 
