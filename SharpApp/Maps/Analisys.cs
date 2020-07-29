@@ -5,7 +5,6 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using Telerik.WinControls;
 
 namespace Maps
 {
@@ -34,7 +33,7 @@ namespace Maps
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "IRINAhhMESH";
+                builder.DataSource = "IRINAMESH";
                 builder.InitialCatalog = "bigData2020";
                 builder.IntegratedSecurity = true;
 
@@ -118,21 +117,20 @@ namespace Maps
 
                 using (var sr = new StreamReader(filepath))
                 {
+                    int i = 0;
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
                         try
                         {
                             var array = line.Split(';');
-                            for (int i = 0; i < array.Length - 1; i++)
-                            {
-                                dataGridView1.Rows.Add();
-                                dataGridView1.Rows[i].Cells[0].Value = array[0];
-                                dataGridView1.Rows[i].Cells[1].Value = array[1];
-                                dataGridView1.Rows[i].Cells[2].Value = DistanceCount(array[4], array[5]);
-                                dataGridView1.Rows[i].Cells[3].Value = array[2];
-                                dataGridView1.Rows[i].Cells[4].Value = array[3];
-                            }
+                            dataGridView1.Rows.Add();
+                            dataGridView1.Rows[i].Cells[0].Value = array[0];
+                            dataGridView1.Rows[i].Cells[1].Value = array[1];
+                            dataGridView1.Rows[i].Cells[2].Value = DistanceCount(array[4], array[5]);
+                            dataGridView1.Rows[i].Cells[3].Value = Convert.ToInt32(array[2]);
+                            dataGridView1.Rows[i].Cells[4].Value = array[3];
+                            i++;
                         }
                         catch (Exception)
                         {
@@ -151,7 +149,7 @@ namespace Maps
                 dataGridView1.Rows[i].Cells[0].Value = data[i][0];
                 dataGridView1.Rows[i].Cells[1].Value = data[i][1];
                 dataGridView1.Rows[i].Cells[2].Value = DistanceCount(data[i][4], data[i][5]);
-                dataGridView1.Rows[i].Cells[3].Value = data[i][2];
+                dataGridView1.Rows[i].Cells[3].Value = Convert.ToInt32(data[i][2]);
                 dataGridView1.Rows[i].Cells[4].Value = data[i][3];
             }
         }
