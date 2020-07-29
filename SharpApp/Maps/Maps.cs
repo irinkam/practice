@@ -23,7 +23,7 @@ namespace Maps
         private void Form1_Load(object sender, EventArgs e)
         {
             //string fullPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string html = File.ReadAllText(@"..\..\..\..\HtmlMaps\map1.html");
+            string html = File.ReadAllText(@"..\..\..\..\HtmlMaps\gradient\map1.html");
             browser.DocumentText = html;
 
             egeComboBox.Items.Add(">80");
@@ -107,7 +107,7 @@ namespace Maps
                         break;
                 }
 
-                html = File.ReadAllText(@"..\..\..\..\HtmlMaps\" + selectedDiscipline + index + ".html");
+                html = File.ReadAllText(@"..\..\..\..\HtmlMaps\gradient\" + selectedDiscipline + index + ".html");
 
                 browser.DocumentText = html;
             }

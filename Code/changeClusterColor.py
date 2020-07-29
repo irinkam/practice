@@ -1,7 +1,5 @@
 from bs4 import BeautifulSoup as Soup
-
 import io
-import chardet
 import os
 import codecs
 
@@ -12,12 +10,12 @@ filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "\\" + 
 bytes = min(32, os.path.getsize(filepath))
 raw = open(filepath, 'rb').read(bytes)
 
-if raw.startswith(codecs.BOM_UTF8):
-    encoding = 'utf-8-sig'
-else:
-    encoding = 'utf-8'
+# if raw.startswith(codecs.BOM_UTF8):
+#     encoding = 'utf-8-sig'
+# else:
+#     encoding = 'utf-8'
 
-infile = io.open(filepath, 'r', encoding=encoding)
+infile = io.open(filepath, 'r', encoding='cp1251')
 data = infile.read()
 infile.close()
 # File closed

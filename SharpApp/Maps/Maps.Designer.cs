@@ -73,7 +73,7 @@
             this.showButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.showButton.Location = new System.Drawing.Point(875, 223);
             this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(258, 36);
+            this.showButton.Size = new System.Drawing.Size(258, 47);
             this.showButton.TabIndex = 6;
             this.showButton.Text = "Показать";
             this.showButton.ThemeName = "Office2010Black";
@@ -82,9 +82,9 @@
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(875, 599);
+            this.exitButton.Location = new System.Drawing.Point(875, 589);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(258, 36);
+            this.exitButton.Size = new System.Drawing.Size(258, 46);
             this.exitButton.TabIndex = 7;
             this.exitButton.Text = "Выход в меню";
             this.exitButton.ThemeName = "Office2010Black";

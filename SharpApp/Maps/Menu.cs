@@ -34,5 +34,12 @@ namespace Maps
         {
             Application.Exit();
         }
+
+        private void graphButton_Click(object sender, EventArgs e)
+        {
+            Plots plots = new Plots();
+            plots.Show();
+            this.Visible = false;
+        }
     }
 }

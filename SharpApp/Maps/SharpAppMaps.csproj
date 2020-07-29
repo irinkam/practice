@@ -159,6 +159,7 @@
     <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2010Black, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2020.2.616.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -198,6 +199,12 @@
     <Compile Include="Maps.Designer.cs">
       <DependentUpon>Maps.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plots.Designer.cs">
+      <DependentUpon>Plots.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Menu.cs">
@@ -212,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maps.resx">
       <DependentUpon>Maps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plots.resx">
+      <DependentUpon>Plots.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

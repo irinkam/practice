@@ -33,16 +33,18 @@
             this.statButton = new Telerik.WinControls.UI.RadButton();
             this.exitButton = new Telerik.WinControls.UI.RadButton();
             this.office2010BlackTheme1 = new Telerik.WinControls.Themes.Office2010BlackTheme();
+            this.graphButton = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.mapsButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // mapsButton
             // 
             this.mapsButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mapsButton.Location = new System.Drawing.Point(56, 60);
+            this.mapsButton.Location = new System.Drawing.Point(56, 48);
             this.mapsButton.Name = "mapsButton";
             this.mapsButton.Size = new System.Drawing.Size(214, 57);
             this.mapsButton.TabIndex = 0;
@@ -53,7 +55,7 @@
             // statButton
             // 
             this.statButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.statButton.Location = new System.Drawing.Point(56, 159);
+            this.statButton.Location = new System.Drawing.Point(56, 147);
             this.statButton.Name = "statButton";
             this.statButton.Size = new System.Drawing.Size(214, 57);
             this.statButton.TabIndex = 1;
@@ -64,7 +66,7 @@
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(56, 254);
+            this.exitButton.Location = new System.Drawing.Point(56, 340);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(214, 57);
             this.exitButton.TabIndex = 1;
@@ -72,11 +74,23 @@
             this.exitButton.ThemeName = "Office2010Black";
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // graphButton
+            // 
+            this.graphButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.graphButton.Location = new System.Drawing.Point(56, 246);
+            this.graphButton.Name = "graphButton";
+            this.graphButton.Size = new System.Drawing.Size(214, 57);
+            this.graphButton.TabIndex = 2;
+            this.graphButton.Text = "Графики";
+            this.graphButton.ThemeName = "Office2010Black";
+            this.graphButton.Click += new System.EventHandler(this.graphButton_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 368);
+            this.ClientSize = new System.Drawing.Size(323, 449);
+            this.Controls.Add(this.graphButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.statButton);
             this.Controls.Add(this.mapsButton);
@@ -91,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mapsButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -102,5 +117,6 @@
         private Telerik.WinControls.UI.RadButton statButton;
         private Telerik.WinControls.UI.RadButton exitButton;
         private Telerik.WinControls.Themes.Office2010BlackTheme office2010BlackTheme1;
+        private Telerik.WinControls.UI.RadButton graphButton;
     }
 }

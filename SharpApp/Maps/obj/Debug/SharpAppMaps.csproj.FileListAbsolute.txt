@@ -107,3 +107,5 @@ C:\Users\IrinaMesh\PycharmProjects\untitled2\SharpApp\Maps\bin\Debug\CsvHelper.x
 C:\Users\IrinaMesh\PycharmProjects\untitled2\SharpApp\Maps\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\IrinaMesh\PycharmProjects\untitled2\SharpApp\Maps\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\IrinaMesh\PycharmProjects\untitled2\SharpApp\Maps\bin\Debug\System.ValueTuple.xml
+C:\Users\IrinaMesh\PycharmProjects\untitled2\SharpApp\Maps\bin\Debug\Telerik.WinControls.Themes.Office2013Dark.dll
+C:\Users\IrinaMesh\PycharmProjects\untitled2\SharpApp\Maps\obj\Debug\Maps.Plots.resources
