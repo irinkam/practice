@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
@@ -35,7 +34,7 @@ namespace Maps
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "IRINAMESH";
+                builder.DataSource = "IRINAhhMESH";
                 builder.InitialCatalog = "bigData2020";
                 builder.IntegratedSecurity = true;
 
@@ -84,7 +83,63 @@ namespace Maps
             }
             catch (SqlException e)
             {
+                string filename = "";
+                string filepath = @"..\..\..\..\CsvFiles\forScatters";
                 MessageBox.Show(e.ToString());
+                switch(discipline)
+                {
+                    case "Физика":
+                        filename = @"\phys.csv";
+                        break;
+                    case "Русский язык":
+                        filename = @"\rus.csv";
+                        break;
+                    case "Математика":
+                        filename = @"\math.csv";
+                        break;
+                    case "Информатика и ИКТ":
+                        filename = @"\ikt.csv";
+                        break;
+                    case "Обществознание":
+                        filename = @"\social.csv";
+                        break;
+                    case "Химия":
+                        filename = @"\chemistry.csv";
+                        break;
+                    case "Творческий конкурс":
+                        filename = @"\creation.csv";
+                        break;
+                    case "География":
+                        filename = @"\geo.csv";
+                        break;
+                }
+
+                filepath += filename;
+
+                using (var sr = new StreamReader(filepath))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        try
+                        {
+                            var array = line.Split(';');
+                            for (int i = 0; i < array.Length - 1; i++)
+                            {
+                                dataGridView1.Rows.Add();
+                                dataGridView1.Rows[i].Cells[0].Value = array[0];
+                                dataGridView1.Rows[i].Cells[1].Value = array[1];
+                                dataGridView1.Rows[i].Cells[2].Value = DistanceCount(array[4], array[5]);
+                                dataGridView1.Rows[i].Cells[3].Value = array[2];
+                                dataGridView1.Rows[i].Cells[4].Value = array[3];
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Некорректный файл");
+                        }
+                    }
+                }
             }
         }
 
@@ -93,15 +148,15 @@ namespace Maps
             for (int i = 0; i < data.Count - 1; i++)
             {
                 dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[0].Value = data[i][0].ToString();
-                dataGridView1.Rows[i].Cells[1].Value = data[i][1].ToString();
-                dataGridView1.Rows[i].Cells[2].Value = DistanceCount(data[i][4], data[i][5], i).ToString();
-                dataGridView1.Rows[i].Cells[3].Value = data[i][2].ToString();
-                dataGridView1.Rows[i].Cells[4].Value = data[i][3].ToString();
+                dataGridView1.Rows[i].Cells[0].Value = data[i][0];
+                dataGridView1.Rows[i].Cells[1].Value = data[i][1];
+                dataGridView1.Rows[i].Cells[2].Value = DistanceCount(data[i][4], data[i][5]);
+                dataGridView1.Rows[i].Cells[3].Value = data[i][2];
+                dataGridView1.Rows[i].Cells[4].Value = data[i][3];
             }
         }
 
-        private double DistanceCount(string l, string w, int i)
+        private double DistanceCount(string l, string w)
         {
             double c1 = Convert.ToDouble(l);
             double c2 = Convert.ToDouble(w);

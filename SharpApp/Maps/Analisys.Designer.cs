@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Analisys_cs));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.schoolColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.office2010BlackTheme1 = new Telerik.WinControls.Themes.Office2010BlackTheme();
             this.label1 = new System.Windows.Forms.Label();
             this.statButton = new Telerik.WinControls.UI.RadButton();
             this.disciplineComboBox = new System.Windows.Forms.ComboBox();
             this.MenuButton = new Telerik.WinControls.UI.RadButton();
+            this.schoolColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanceFromTomsk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abiturientCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -52,26 +54,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.schoolColumn,
             this.cityColumn,
+            this.distanceFromTomsk,
+            this.abiturientCount,
             this.markColumn});
             this.dataGridView1.Location = new System.Drawing.Point(12, 174);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1308, 486);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // schoolColumn
-            // 
-            this.schoolColumn.HeaderText = "Школа";
-            this.schoolColumn.Name = "schoolColumn";
-            // 
-            // cityColumn
-            // 
-            this.cityColumn.HeaderText = "Город";
-            this.cityColumn.Name = "cityColumn";
-            // 
-            // markColumn
-            // 
-            this.markColumn.HeaderText = "Средний балл";
-            this.markColumn.Name = "markColumn";
             // 
             // label1
             // 
@@ -115,6 +104,31 @@
             this.MenuButton.ThemeName = "Office2010Black";
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
+            // schoolColumn
+            // 
+            this.schoolColumn.HeaderText = "Школа";
+            this.schoolColumn.Name = "schoolColumn";
+            // 
+            // cityColumn
+            // 
+            this.cityColumn.HeaderText = "Город";
+            this.cityColumn.Name = "cityColumn";
+            // 
+            // distanceFromTomsk
+            // 
+            this.distanceFromTomsk.HeaderText = "Расстояние от Томска";
+            this.distanceFromTomsk.Name = "distanceFromTomsk";
+            // 
+            // abiturientCount
+            // 
+            this.abiturientCount.HeaderText = "Число поступающих";
+            this.abiturientCount.Name = "abiturientCount";
+            // 
+            // markColumn
+            // 
+            this.markColumn.HeaderText = "Средний балл";
+            this.markColumn.Name = "markColumn";
+            // 
             // Analisys_cs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +166,8 @@
         private Telerik.WinControls.UI.RadButton MenuButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn schoolColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanceFromTomsk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abiturientCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn markColumn;
     }
 }

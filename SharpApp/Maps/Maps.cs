@@ -22,7 +22,8 @@ namespace Maps
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map1.html");
+            //string fullPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string html = File.ReadAllText(@"..\..\..\..\HtmlMaps\generated\_map1.html");
             browser.DocumentText = html;
 
             egeComboBox.Items.Add(">80");
@@ -48,16 +49,16 @@ namespace Maps
                     case -1:
                         throw new Exception();
                     case 0:
-                        html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map2.html");
-                        break;
-                    case 1:
-                        html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map3.html");
-                        break;
-                    case 2:
-                        html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map4.html");
-                        break;
-                    default:
-                        html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map1.html");
+                        html = File.ReadAllText(@"..\..\..\..\HtmlMaps\generated\_map2.html");
+                        break;                  
+                    case 1:                     
+                        html = File.ReadAllText(@"..\..\..\..\HtmlMaps\generated\_map3.html");
+                        break;                  
+                    case 2:                     
+                        html = File.ReadAllText(@"..\..\..\..\HtmlMaps\generated\_map4.html");
+                        break;                  
+                    default:                    
+                        html = File.ReadAllText(@"..\..\..\..\HtmlMaps\generated\_map1.html");
                         break;
                 }
                 browser.DocumentText = html;
