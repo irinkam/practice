@@ -17,12 +17,12 @@ namespace Maps
         {
             InitializeComponent();
 
-            browser.Url = new Uri((@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_rus_cities.html"));
+            //browser.Url = new Uri((@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map1.html"));
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_rus_cities.html");
+            string html = File.ReadAllText(@"C:\Users\IrinaMesh\PycharmProjects\untitled2\HtmlMaps\generated\_map1.html");
             browser.DocumentText = html;
 
             egeComboBox.Items.Add(">80");
