@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c1058fa569034c9088d70ecb5aeea671 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+<style>
+.marker-cluster-small {
+    background-color: rgba(192,192,192, 0.6);
+}
+.marker-cluster-medium {
+    background-color: rgba(192,192,192, 0.6);
+}
+.marker-cluster-large {
+    background-color: rgba(192,192,192, 0.6);
+}
+.marker-cluster-small div {
+    background-color: rgba(119,136,153, 0.6);
+}
+.marker-cluster-medium div {
+    background-color: rgba(119,136,153, 0.6);
+}
+.marker-cluster-large div {
+    background-color: rgba(119,136,153, 0.6);
+}
+</style></head>
+<body>    
+    
+            <div class="folium-map" id="map_c1058fa569034c9088d70ecb5aeea671" ></div>
+        
+</body>
+<script>    
+    
+            var map_c1058fa569034c9088d70ecb5aeea671 = L.map(
+                "map_c1058fa569034c9088d70ecb5aeea671",
+                {
+                    center: [56.48468, 84.948197],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_27fa68084d244b0fbeeea0c392984734 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c1058fa569034c9088d70ecb5aeea671);
+        
+    
+            var marker_cluster_192236b1fb654d548f0f4ded86a0a953 = L.markerClusterGroup(
+                {}
+            );
+            map_c1058fa569034c9088d70ecb5aeea671.addLayer(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+            var circle_marker_1b30c05c0ecb47d983faa84a44d76702 = L.circleMarker(
+                [43.25667, 76.92860999999999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_6cd7672e9a804c2e93263858e6c338a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6a7d50fbed94d358cbc99ba81263e82 = $('<div id="html_e6a7d50fbed94d358cbc99ba81263e82" style="width: 100.0%; height: 100.0%;">Алматы: 2  чел., ср. балл=56</div>')[0];
+            popup_6cd7672e9a804c2e93263858e6c338a1.setContent(html_e6a7d50fbed94d358cbc99ba81263e82);
+        
+
+        circle_marker_1b30c05c0ecb47d983faa84a44d76702.bindPopup(popup_6cd7672e9a804c2e93263858e6c338a1)
+        ;
+
+        
+    
+    
+            var circle_marker_1eea9d335052408d9593f5a374e723eb = L.circleMarker(
+                [48.30272, 89.51557],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_58fbacd63a7d432d851ef687ba15d7c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba7185b887454bcc9cb4189b49e934f4 = $('<div id="html_ba7185b887454bcc9cb4189b49e934f4" style="width: 100.0%; height: 100.0%;">Алтай: 2  чел., ср. балл=58</div>')[0];
+            popup_58fbacd63a7d432d851ef687ba15d7c7.setContent(html_ba7185b887454bcc9cb4189b49e934f4);
+        
+
+        circle_marker_1eea9d335052408d9593f5a374e723eb.bindPopup(popup_58fbacd63a7d432d851ef687ba15d7c7)
+        ;
+
+        
+    
+    
+            var circle_marker_0feb3e4fbdd8443ca42768c05b148787 = L.circleMarker(
+                [56.95938, 65.7708],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_4d2de44332854a298454506300139360 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c55dfb7c577844f4b1e9d7fb12413f31 = $('<div id="html_c55dfb7c577844f4b1e9d7fb12413f31" style="width: 100.0%; height: 100.0%;">Винзили: 1  чел., ср. балл=57</div>')[0];
+            popup_4d2de44332854a298454506300139360.setContent(html_c55dfb7c577844f4b1e9d7fb12413f31);
+        
+
+        circle_marker_0feb3e4fbdd8443ca42768c05b148787.bindPopup(popup_4d2de44332854a298454506300139360)
+        ;
+
+        
+    
+    
+            var circle_marker_635a692a14f644f6b26741f6c1a2c35f = L.circleMarker(
+                [53.5584, 102.5065],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_8b04df26d1f249bf86fdce33530392e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15e363071c554f338a3b978b87b69a6c = $('<div id="html_15e363071c554f338a3b978b87b69a6c" style="width: 100.0%; height: 100.0%;">Залари: 1  чел., ср. балл=56</div>')[0];
+            popup_8b04df26d1f249bf86fdce33530392e2.setContent(html_15e363071c554f338a3b978b87b69a6c);
+        
+
+        circle_marker_635a692a14f644f6b26741f6c1a2c35f.bindPopup(popup_8b04df26d1f249bf86fdce33530392e2)
+        ;
+
+        
+    
+    
+            var circle_marker_ec2bcbd1605949409e6fe5a5ae3cf068 = L.circleMarker(
+                [57.33554285, 82.15520921],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_b9e21e1f12a44eddbb90aadfcb139958 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a76a888353bf44b689468164002dfce9 = $('<div id="html_a76a888353bf44b689468164002dfce9" style="width: 100.0%; height: 100.0%;">Киселевка: 1  чел., ср. балл=54</div>')[0];
+            popup_b9e21e1f12a44eddbb90aadfcb139958.setContent(html_a76a888353bf44b689468164002dfce9);
+        
+
+        circle_marker_ec2bcbd1605949409e6fe5a5ae3cf068.bindPopup(popup_b9e21e1f12a44eddbb90aadfcb139958)
+        ;
+
+        
+    
+    
+            var circle_marker_e8c26a52543641af8d26d497904e052d = L.circleMarker(
+                [58.2218201, 92.50369859999999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_ed28de2d29c54e558a34cc9d2844f27f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6ff85e2da9d4ef791de28e5afb41fab = $('<div id="html_d6ff85e2da9d4ef791de28e5afb41fab" style="width: 100.0%; height: 100.0%;">Лесосибирск: 1  чел., ср. балл=60</div>')[0];
+            popup_ed28de2d29c54e558a34cc9d2844f27f.setContent(html_d6ff85e2da9d4ef791de28e5afb41fab);
+        
+
+        circle_marker_e8c26a52543641af8d26d497904e052d.bindPopup(popup_ed28de2d29c54e558a34cc9d2844f27f)
+        ;
+
+        
+    
+    
+            var circle_marker_3e9d9e7924664e97a7305b93fb2d119a = L.circleMarker(
+                [41.529677, 64.601364],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_a9502fbbc95c4dfab42023c9e1f2a998 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9da245429e94907be4d65d11edc5d22 = $('<div id="html_a9da245429e94907be4d65d11edc5d22" style="width: 100.0%; height: 100.0%;">Мурунтау: 1  чел., ср. балл=60</div>')[0];
+            popup_a9502fbbc95c4dfab42023c9e1f2a998.setContent(html_a9da245429e94907be4d65d11edc5d22);
+        
+
+        circle_marker_3e9d9e7924664e97a7305b93fb2d119a.bindPopup(popup_a9502fbbc95c4dfab42023c9e1f2a998)
+        ;
+
+        
+    
+    
+            var circle_marker_8684a450d6d547d4b23e67745f03088a = L.circleMarker(
+                [56.58240245, 84.57478045],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_df0375325d974e23ba2aee08ecdf65a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5e80b237c894911ab185a9ea6a26f2e = $('<div id="html_b5e80b237c894911ab185a9ea6a26f2e" style="width: 100.0%; height: 100.0%;">Нелюбино: 1  чел., ср. балл=58</div>')[0];
+            popup_df0375325d974e23ba2aee08ecdf65a3.setContent(html_b5e80b237c894911ab185a9ea6a26f2e);
+        
+
+        circle_marker_8684a450d6d547d4b23e67745f03088a.bindPopup(popup_df0375325d974e23ba2aee08ecdf65a3)
+        ;
+
+        
+    
+    
+            var circle_marker_debb21b21ba64b7eb9ca7b236fbe6cbb = L.circleMarker(
+                [43.91904, 46.710190000000004],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_d10a1d97161c45a3996bef4cce8430c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d1bde713ff9418393138a011d2fc814 = $('<div id="html_0d1bde713ff9418393138a011d2fc814" style="width: 100.0%; height: 100.0%;">Первомайское: 1  чел., ср. балл=55</div>')[0];
+            popup_d10a1d97161c45a3996bef4cce8430c2.setContent(html_0d1bde713ff9418393138a011d2fc814);
+        
+
+        circle_marker_debb21b21ba64b7eb9ca7b236fbe6cbb.bindPopup(popup_d10a1d97161c45a3996bef4cce8430c2)
+        ;
+
+        
+    
+    
+            var circle_marker_f438b4a912594a61a5d24473c8c3fd7f = L.circleMarker(
+                [59.93863, 30.31413],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_1c37b4f941274b6aa50e7e5a13fa149f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa91adfbd881468facf4e264dbd934c8 = $('<div id="html_aa91adfbd881468facf4e264dbd934c8" style="width: 100.0%; height: 100.0%;">Санкт-Петербург: 1  чел., ср. балл=58</div>')[0];
+            popup_1c37b4f941274b6aa50e7e5a13fa149f.setContent(html_aa91adfbd881468facf4e264dbd934c8);
+        
+
+        circle_marker_f438b4a912594a61a5d24473c8c3fd7f.bindPopup(popup_1c37b4f941274b6aa50e7e5a13fa149f)
+        ;
+
+        
+    
+    
+            var circle_marker_bcb4dbc0ce5e40a38f46ac6b57f30b96 = L.circleMarker(
+                [50.05494, 72.96464],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_60bb8c6f406f4640ae1eafa03112c4a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_edf44841b3d04166a64ed31167016084 = $('<div id="html_edf44841b3d04166a64ed31167016084" style="width: 100.0%; height: 100.0%;">Темиртау: 1  чел., ср. балл=53</div>')[0];
+            popup_60bb8c6f406f4640ae1eafa03112c4a2.setContent(html_edf44841b3d04166a64ed31167016084);
+        
+
+        circle_marker_bcb4dbc0ce5e40a38f46ac6b57f30b96.bindPopup(popup_60bb8c6f406f4640ae1eafa03112c4a2)
+        ;
+
+        
+    
+    
+            var circle_marker_864e19d6746f49a9a6a09b276594f453 = L.circleMarker(
+                [42.50163795, 111.0837751],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_8a3c4cb698ec4aee8d43f8fd7dc348ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8eaba54c72ea43768d9f4bd604ea3349 = $('<div id="html_8eaba54c72ea43768d9f4bd604ea3349" style="width: 100.0%; height: 100.0%;">Улюнхан: 1  чел., ср. балл=56</div>')[0];
+            popup_8a3c4cb698ec4aee8d43f8fd7dc348ac.setContent(html_8eaba54c72ea43768d9f4bd604ea3349);
+        
+
+        circle_marker_864e19d6746f49a9a6a09b276594f453.bindPopup(popup_8a3c4cb698ec4aee8d43f8fd7dc348ac)
+        ;
+
+        
+    
+    
+            var circle_marker_6184255d0a9e48e98f826dcd437c969b = L.circleMarker(
+                [40.283611, 69.623962],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_35a1719482cf4cb6becdead8ded70051 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ce2d95edea34f1399a2f1a9d61bc689 = $('<div id="html_7ce2d95edea34f1399a2f1a9d61bc689" style="width: 100.0%; height: 100.0%;">Худжанск: 1  чел., ср. балл=53</div>')[0];
+            popup_35a1719482cf4cb6becdead8ded70051.setContent(html_7ce2d95edea34f1399a2f1a9d61bc689);
+        
+
+        circle_marker_6184255d0a9e48e98f826dcd437c969b.bindPopup(popup_35a1719482cf4cb6becdead8ded70051)
+        ;
+
+        
+    
+    
+            var circle_marker_525c0a59af144ef59279858ca6c2b248 = L.circleMarker(
+                [44.168820000000004, 66.73886999999999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_c10baf00381647b5ba705ec1644938b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f48108f9998481dbe1b783ad9dad17b = $('<div id="html_7f48108f9998481dbe1b783ad9dad17b" style="width: 100.0%; height: 100.0%;">Шиели: 1  чел., ср. балл=60</div>')[0];
+            popup_c10baf00381647b5ba705ec1644938b0.setContent(html_7f48108f9998481dbe1b783ad9dad17b);
+        
+
+        circle_marker_525c0a59af144ef59279858ca6c2b248.bindPopup(popup_c10baf00381647b5ba705ec1644938b0)
+        ;
+
+        
+    
+    
+            var circle_marker_81257e9ef7ed427c817b3e103c0490d2 = L.circleMarker(
+                [52.1582, 82.2173],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "greenyellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_192236b1fb654d548f0f4ded86a0a953);
+        
+    
+        var popup_130c930f570843a5be7d849d48412b1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b108d48401c4a299b3ec621eb8c3bf0 = $('<div id="html_2b108d48401c4a299b3ec621eb8c3bf0" style="width: 100.0%; height: 100.0%;">Шипуново: 1  чел., ср. балл=57</div>')[0];
+            popup_130c930f570843a5be7d849d48412b1d.setContent(html_2b108d48401c4a299b3ec621eb8c3bf0);
+        
+
+        circle_marker_81257e9ef7ed427c817b3e103c0490d2.bindPopup(popup_130c930f570843a5be7d849d48412b1d)
+        ;
+
+        
+    
+</script>
