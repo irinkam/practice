@@ -26,6 +26,14 @@ namespace Maps
             disciplineComboBox.Items.Add("География");
 
             dataGridView1.Visible = false;
+
+            foreach (DataGridViewColumn c in dataGridView1.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 18F, GraphicsUnit.Pixel);
+                
+            }
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 18);
         }
 
         private void LoadData(string discipline)
@@ -121,6 +129,7 @@ namespace Maps
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
+                        //dataGridView1.Columns[i].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 18);
                         try
                         {
                             var array = line.Split(';');
@@ -203,6 +212,11 @@ namespace Maps
             Menu menu = new Menu();
             menu.Show();
             this.Close();
+        }
+
+        private void Analisys_cs_Load(object sender, EventArgs e)
+        {
+
         }
 
         //private void Form_Closing(object sender, FormClosingEventArgs e)

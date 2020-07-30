@@ -43,6 +43,8 @@
             // 
             // mapsButton
             // 
+            this.mapsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mapsButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mapsButton.Location = new System.Drawing.Point(56, 48);
             this.mapsButton.Name = "mapsButton";
@@ -54,6 +56,8 @@
             // 
             // statButton
             // 
+            this.statButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.statButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.statButton.Location = new System.Drawing.Point(56, 147);
             this.statButton.Name = "statButton";
@@ -65,6 +69,8 @@
             // 
             // exitButton
             // 
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.exitButton.Location = new System.Drawing.Point(56, 340);
             this.exitButton.Name = "exitButton";
@@ -76,6 +82,8 @@
             // 
             // graphButton
             // 
+            this.graphButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.graphButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.graphButton.Location = new System.Drawing.Point(56, 246);
             this.graphButton.Name = "graphButton";

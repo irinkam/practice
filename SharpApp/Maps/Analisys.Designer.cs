@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Analisys_cs));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.office2010BlackTheme1 = new Telerik.WinControls.Themes.Office2010BlackTheme();
-            this.label1 = new System.Windows.Forms.Label();
-            this.statButton = new Telerik.WinControls.UI.RadButton();
-            this.disciplineComboBox = new System.Windows.Forms.ComboBox();
-            this.MenuButton = new Telerik.WinControls.UI.RadButton();
             this.schoolColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distanceFromTomsk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abiturientCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.office2010BlackTheme1 = new Telerik.WinControls.Themes.Office2010BlackTheme();
+            this.label1 = new System.Windows.Forms.Label();
+            this.statButton = new Telerik.WinControls.UI.RadButton();
+            this.disciplineComboBox = new System.Windows.Forms.ComboBox();
+            this.MenuButton = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -48,8 +50,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 18F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.schoolColumn,
@@ -57,10 +70,43 @@
             this.distanceFromTomsk,
             this.abiturientCount,
             this.markColumn});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 18F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 174);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1308, 486);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // schoolColumn
+            // 
+            this.schoolColumn.HeaderText = "Школа";
+            this.schoolColumn.Name = "schoolColumn";
+            // 
+            // cityColumn
+            // 
+            this.cityColumn.HeaderText = "Город";
+            this.cityColumn.Name = "cityColumn";
+            // 
+            // distanceFromTomsk
+            // 
+            this.distanceFromTomsk.HeaderText = "Расстояние от Томска";
+            this.distanceFromTomsk.Name = "distanceFromTomsk";
+            // 
+            // abiturientCount
+            // 
+            this.abiturientCount.HeaderText = "Число поступающих";
+            this.abiturientCount.Name = "abiturientCount";
+            // 
+            // markColumn
+            // 
+            this.markColumn.HeaderText = "Средний балл";
+            this.markColumn.Name = "markColumn";
             // 
             // label1
             // 
@@ -104,31 +150,6 @@
             this.MenuButton.ThemeName = "Office2010Black";
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
-            // schoolColumn
-            // 
-            this.schoolColumn.HeaderText = "Школа";
-            this.schoolColumn.Name = "schoolColumn";
-            // 
-            // cityColumn
-            // 
-            this.cityColumn.HeaderText = "Город";
-            this.cityColumn.Name = "cityColumn";
-            // 
-            // distanceFromTomsk
-            // 
-            this.distanceFromTomsk.HeaderText = "Расстояние от Томска";
-            this.distanceFromTomsk.Name = "distanceFromTomsk";
-            // 
-            // abiturientCount
-            // 
-            this.abiturientCount.HeaderText = "Число поступающих";
-            this.abiturientCount.Name = "abiturientCount";
-            // 
-            // markColumn
-            // 
-            this.markColumn.HeaderText = "Средний балл";
-            this.markColumn.Name = "markColumn";
-            // 
             // Analisys_cs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +168,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Статистика";
             this.ThemeName = "Office2010Black";
+            this.Load += new System.EventHandler(this.Analisys_cs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).EndInit();
